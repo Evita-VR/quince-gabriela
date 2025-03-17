@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Birthstone+Bounce:wght@400;500&family=Coming+Soon&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Handlee&family=League+Script&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
+        <style>
+            #header {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            h1,h2 {
+                font-family: "Parisienne", cursive;
+                text-align: center;
+            }
+
+            h2 {
+                margin: 0px;
+                padding: 0px;
+                font-size: 50px;
+            }
+
+            h1
+            {
+                margin: 0px;
+                padding: 0px;
+                font-size: 60px;
+            }
+
+            p,label,li {
+                font-size: 22px;
+                font-family: "Noto Serif Display", serif;
+                margin: 0px;
+            }
+
+            img {
+                height: 250px;
+            }
+
+            #form_body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-image: url("gaby_quince_canvas/backgroun_quinceañera.png");
+                background-size: auto 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .intro_message {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 600px;
+            }
+
+            #header_text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-block: 40px;
+            }
+
+            #footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .attending_form {
+                display: flex;
+                flex-direction: column;
+                width: 600px;
+            }
+
+            #confirmation_question {
+            }
+
+            #allergies_textarea {
+                resize: none;
+                width: 500px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img src="gaby_quince_canvas/border_top_left.png" alt="">
+            <div id="header_text">
+                <a href="gabrielas15_home.html"><img src="gaby_quince_canvas/crown_1.png" alt="" style="height: 100px;"></a>
+                <h2>Los Quince de</h2>
+                <h1 style="color: #3a5d8d;">Gabriela Vasquez Reyes</h1>
+            </div>
+            <img src="gaby_quince_canvas/border_top_right.png" alt="">
+        </div>
+
+        <div id="form_body">
+            <div class="intro_message">
+                <!-- They input their number to see if they are in the invited list -->
+                <label for="phone_number">Por favor ingrese el número de la persona que recibió la invitación: (xxx)xxx-xxxx </label>
+                <input id="phone_number" type="tel" style="height: 20px;" name="phone_number" required>
+                <input type="submit" value="Confirmar" name="phone_number">
+                
+                <!-- If they are, it asks whether they will attend or not -->
+                <form action="">
+                    <p>Hola <span>Nombre de Familia o Amigo aqui</span>!</p>
+                    <p>Por favor seleccione la opción que corresponda con su respuesta a la invitación: </p>
+                    <input id="accept" type="radio" class="will_attend" name="will_attend">
+                    <label for="accept">Acepto mi invitacion al evento</label><br>
+                    <input id="decline" type="radio" class="will_attend" name="will_attend">
+                    <label for="decline">Lamentablemente declinaré la invitación al evento</label><br>
+                </form>
+            </div>
+            
+             <!-- Once they submit a confirmation of attendance, the rest of the form displays -->
+            <div class="attending_form">
+                <p>Tenemos asientos reservados para los siguentes membros de su familia: <p id="seats_reserved_num"></p></p>
+                <ul>
+                    <li>Family member 1</li>
+                    <li>Family member 2</li>
+                    <li>Family member 2</li>
+                    <li>Family member 2</li>
+                    <li>Family member 2</li>
+                </ul>
+                <form action="" class="attending_form">
+                    <!-- Drop down with all the invited members names -->
+                    <label for="seats_reserved_select">Selecione el numero de asientos que desea acceptar:</label>
+                    <select name="seats_reserved_select" id="seats_reserved_select" ">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>
+
+                    <label for="allergies">Si alguien en su familia tiene alergias alimentarias porfavor indiquelas abajo acompañado por el nombre de la persona a cual la alergia le pertenece</p>
+                    <textarea name="allergies" id="allergies_textarea"></textarea><br>
+                    <input type="submit" name="allergies" value="Reservar Asientos">
+                </form>
+            </div>
+            <!-- show gift regardless of what they put maybe just change wording -->
+            <!-- Would you like to send a digital gits? -->
+
+        </div>
+
+        <div id="footer">
+            <img src="gaby_quince_canvas/border_bottom_left.png" alt="">
+            <img src="gaby_quince_canvas/border_bottom_right.png" alt="">
+        </div>
+    </body>
+</html>
