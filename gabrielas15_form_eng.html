@@ -69,7 +69,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-block: 50px;
+                margin-bottom: 50px;
             }
 
             #footer {
@@ -85,6 +85,7 @@
                 flex-direction: column;
                 width: 600px;
                 gap: 30px;
+                margin-top: 20px;
             }
 
             .attending_form {
@@ -133,6 +134,110 @@
 
             .submission_message {
                 display: none;
+                justify-content: center;
+                align-items: center;
+                height: 380px;
+            }
+
+            #header a img {
+                height: 100px;
+            }
+
+            #header a {
+                align-self: flex-end;
+            }
+
+            @media (max-width: 500px) {
+                img {
+                    height: 100px;
+                }
+
+                #header a img {
+                    height: 50px;
+                }
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                h1 {
+                    font-size: 25px;
+                }
+
+                p,label,li {
+                    font-size: 15px;
+                    font-family: "Noto Serif Display", serif;
+                    margin: 0px;
+                }
+
+                .will_attend_q label{
+                    font-size: 15px;
+                }
+
+                #header_text {
+                    padding: 0px;
+                    margin: 0px;
+                }
+
+                #body_text {
+                    width: 300px;
+                }
+
+                #gaby_name_invitation {
+                    font-size: 30px;
+                }
+
+                #parent_names_invitation {
+                    font-size: 25px;
+                }
+
+                #home_form_message {
+                    font-size: 15px;
+                }
+
+                .buttons {
+                    height: 35px;
+                    font-size: 12px;
+                    border-radius: 20px;
+                    margin-bottom: 0px;
+                }
+
+                #reserve_button a p{
+                    font-size: 12px;
+                }
+
+                #reserve_button {
+                    padding-inline: 15px;
+                    padding-block: 5px;
+                    height: 30px;
+                    margin-top: 0px;
+                }
+
+                .cellphone_id_q {
+                    width: 300px;
+                    height: 380px;
+                }
+
+                #header a img {
+                    height: 50px;
+                }
+
+                .attending_form_body {
+                    width: 300px;
+                    gap: 15px;
+                }
+
+                .attending_form {
+                    width: 300px;
+                }
+
+                #number_submit {
+                    width: 90px;
+                }
+
+                #form_submit {
+                    width: 150px;
+                }
             }
 
         </style>
@@ -232,26 +337,27 @@
     <body>
         <div id="header">
             <img src="gaby_quince_canvas/border_top_left.png" alt="">
-             <div id="header_text">
-                <a href="gabrielas15_home.html"><img src="gaby_quince_canvas/crown_1.png" alt="" style="height: 100px;"></a>
-                <h2>Her Quince</h2>
-                <h1 style="color: #3a5d8d;">Gabriela Vasquez Reyes</h1>
-            </div>
+            <a href="gabrielas15_home_eng.html"><img src="gaby_quince_canvas/crown_1.png" alt=""></a>
             <img src="gaby_quince_canvas/border_top_right.png" alt="">
         </div>
        
         <div id="form_body">
+            <div id="header_text">
+                <h2>Her Quince</h2>
+                <h1 style="color: #3a5d8d;">Gabriela Vasquez Reyes</h1>
+            </div>
             <div class="cellphone_id_q">
+                
                 <!-- They input their number to see if they are in the invited list -->
                 <label for="phone_number_input">Please enter the number of the person who received the invitation: </label>
                 <input id="phone_number_input" type="tel" name="phone_number" maxlength="14" placeholder="(XXX) XXX-XXXX">
-                <input type="submit" value="Confirmar" name="phone_number" class="buttons" onclick="getFamilyInfo()">
+                <input type="submit" value="Confirmar" name="phone_number" id="number_submit" class="buttons" onclick="getFamilyInfo()">
             </div>
             
              <!-- Once they submit a confirmation of attendance, the rest of the form displays -->
             <div class="attending_form_body">
                 <p>Hello <span id="family_name"></span> Family!</p>
-                <div>
+                <div id="family_memebers_q">
                     <p>We have seats reserved for the following members of your family: </p>
                     <ul id="family_members_list"></ul>
                 </div>
@@ -278,7 +384,7 @@
                         <p style="font-size: 15px; font-style: italic; color: red; font-weight: bold;">Tenga en cuenta que aún podríamos servir algunos de los productos que usted indica como alérgenos. Sin embargo, esta información nos ayudará a ser más cautelosos con respecto a su ubicación y a los alimentos que se manipulan a su alrededor.</p>
                     </div>-->
                 </form>
-                <input class="buttons" type="submit" name="attending_form_submit" value="Reserve Seats" onclick="submitMessage(event)">
+                <input class="buttons" id="form_submit" type="submit" name="attending_form_submit" value="Reservar Asientos" onclick="submitMessage(event)">
             </div>
             <!-- show gift regardless of what they put maybe just change wording -->
             <!-- Would you like to send a digital gits? -->

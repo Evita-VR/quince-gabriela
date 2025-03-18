@@ -10,6 +10,7 @@
            #header {
             display: flex;
             justify-content: space-between;
+            width: 100%;
            }
 
            h1,h2,p {
@@ -27,6 +28,7 @@
                 margin: 0px;
                 padding: 0px;
                 font-size: 60px;
+                text-align: center;
             }
 
             p {
@@ -65,7 +67,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding-top: 50px;
-                padding-bottom: 20px;
+                align-self: flex-end;
             }
 
             #reserve_button {
@@ -135,30 +137,118 @@
                 background-color: #3a5d8d;
             }
 
+            #header_text a img {
+                height: 100px;
+            }
+
+            #gaby_name_invitation {
+                font-size: 50px;
+                color: #5c87b1;
+            }
+
+            #parent_names_invitation {
+                color: #5c87b1; 
+                font-size: 40px;
+            } 
+
+            #home_form_message {
+                font-size: 25px; 
+                font-family:'Noto Serif Display', serif;
+            }
+
+            #header_bottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @media (max-width: 500px) {
+                img {
+                    height: 100px;
+                }
+
+                #header_text a img {
+                    height: 50px;
+                }
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                h1 {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 20px;
+                    margin: 0px;
+                }
+
+                #header_text {
+                    padding: 0px;
+                }
+
+                #body_text {
+                    width: 300px;
+                }
+
+                #gaby_name_invitation {
+                    font-size: 30px;
+                }
+
+                #parent_names_invitation {
+                    font-size: 25px;
+                }
+
+                #home_form_message {
+                    font-size: 15px;
+                }
+
+                .buttons {
+                    padding-block: 5px;
+                    padding-inline: 10px;
+                    font-size: 10px;
+                    margin-inline: 10px;
+                }
+
+                #reserve_button a p{
+                    font-size: 12px;
+                }
+
+                #reserve_button {
+                    padding-inline: 15px;
+                    padding-block: 5px;
+                    height: 30px;
+                    margin-top: 0px;
+                }
+            }
+
         </style>
     </head>
     <body>
         <div id="header">
             <img src="gaby_quince_canvas/border_top_left.png" alt="">
             <div id="header_text">
-                <a href="gabrielas15_home_eng.html"><img src="gaby_quince_canvas/crown_1.png" alt="" style="height: 100px;"></a>
-                <h2>Her Quince</h2>
-                <h1 style="color: #3a5d8d;">Gabriela Vasquez Reyes</h1>
+                <a href="gabrielas15_home.html"><img src="gaby_quince_canvas/crown_1.png" alt=""></a>
+            </div>
+            <img src="gaby_quince_canvas/border_top_right.png" alt="">
+        </div>
+        
+        <div id="body_home">
+            <div id="header_bottom">
+            <h2>Her Quince</h2>
+            <h1 style="color: #3a5d8d;">Gabriela Vasquez Reyes</h1>
                 <div id="language_buttons">
                     <button class="buttons" onclick="location.href='gabrielas15_home.html'">Español</button>
                     <button class="buttons" style="background-color: #3a5d8d;">English</button>
                 </div>
             </div>
-            
-            
-            <img src="gaby_quince_canvas/border_top_right.png" alt="">
-        </div>
-        <div id="body_home">
             <div id="body_text">
                 <p>There are moments in life that are unrepeatable, but sharing them with the people you love most becomes unforgettable.</p>
-                <p style="font-size: 50px; color: #5c87b1;">Gabriela Vasquez Reyes</p>
+                <p id="gaby_name_invitation">Gabriela Vasquez Reyes</p>
                 <p>With the Blessing of God of my Parents</p>
-                <p style="color: #5c87b1; font-size: 40px;">Johana Reyes and William Vasquez</p>
+                <p id="parent_names_invitation">Johana Reyes and William Vasquez</p>
                 <p>We have the honor of inviting you to the celebration of my fifteenth birthday, which will take place in</p>
                 <div id="venue_address">
                     <a href="https://maps.app.goo.gl/WtRLR92KfpXaTLUh8" target="_blank">
@@ -167,7 +257,7 @@
                         <p>New Jersey, 08638</p>
                     </a>
                 </div>
-                <p style="font-size: 25px; font-family:'Noto Serif Display', serif;">If you wish to accept your reserved seats, please fill out the following form.</p>
+                <p id="home_form_message">If you wish to accept your reserved seats, please fill out the following form</p>
             </div>
         </div>
         <div id="footer">
