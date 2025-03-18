@@ -234,7 +234,7 @@
             <img src="gaby_quince_canvas/border_top_left.png" alt="">
              <div id="header_text">
                 <a href="gabrielas15_home.html"><img src="gaby_quince_canvas/crown_1.png" alt="" style="height: 100px;"></a>
-                <h2>Los Quince de</h2>
+                <h2>Her Quince</h2>
                 <h1 style="color: #3a5d8d;">Gabriela Vasquez Reyes</h1>
             </div>
             <img src="gaby_quince_canvas/border_top_right.png" alt="">
@@ -243,16 +243,16 @@
         <div id="form_body">
             <div class="cellphone_id_q">
                 <!-- They input their number to see if they are in the invited list -->
-                <label for="phone_number_input">Por favor ingrese el número de la persona que recibió la invitación: </label>
+                <label for="phone_number_input">Please enter the number of the person who received the invitation: </label>
                 <input id="phone_number_input" type="tel" name="phone_number" maxlength="14" placeholder="(XXX) XXX-XXXX">
                 <input type="submit" value="Confirmar" name="phone_number" class="buttons" onclick="getFamilyInfo()">
             </div>
             
              <!-- Once they submit a confirmation of attendance, the rest of the form displays -->
             <div class="attending_form_body">
-                <p>Hola Familia <span id="family_name">[Nombre de Familia o Amigo aqui]</span>!</p>
+                <p>Hello <span id="family_name"></span> Family!</p>
                 <div>
-                    <p>Tenemos asientos reservados para los siguentes membros de su familia: </p>
+                    <p>We have seats reserved for the following members of your family: </p>
                     <ul id="family_members_list"></ul>
                 </div>
                 
@@ -260,16 +260,16 @@
                     <input type="hidden" id="family_name_input" name="family_name" value="">
                     <input type="hidden" id="phone_number_hidden" name="phone_number" value="">
                     <div class="will_attend_q">
-                        <p style="margin-bottom: 10px;">Por favor seleccione la opción que corresponda con su respuesta a la invitación: </p>
+                        <p style="margin-bottom: 10px;">Please select the option that corresponds to your response to the invitation: </p>
                         <input id="accept" type="radio" name="will_attend" value="Acepto">
-                        <label for="accept">Acepto mi invitacion al evento</label><br>
+                        <label for="accept">I accept my invitation to the event</label><br>
                         <input id="decline" type="radio" name="will_attend" value="Declino">
-                        <label for="decline">Lamentablemente declinaré la invitación al evento</label><br>
+                        <label for="decline">Unfortunately, I decline my invitation to the event</label><br>
                     </div>
                     
                     <!-- Drop down with all the invited members names -->
                     <div class="seats_reserved_q">
-                        <label for="seats_reserved_select">Selecione el numero de asientos que desea acceptar:</label>
+                        <label for="seats_reserved_select">Please select the number of seats you'd like to accept:</label>
                         <select name="seats_reserved_select" id="seats_reserved_select"></select>
                     </div>
                     <!--<div class="allergies_q">
@@ -278,12 +278,12 @@
                         <p style="font-size: 15px; font-style: italic; color: red; font-weight: bold;">Tenga en cuenta que aún podríamos servir algunos de los productos que usted indica como alérgenos. Sin embargo, esta información nos ayudará a ser más cautelosos con respecto a su ubicación y a los alimentos que se manipulan a su alrededor.</p>
                     </div>-->
                 </form>
-                <input class="buttons" type="submit" name="attending_form_submit" value="Reservar Asientos" onclick="submitMessage(event)">
+                <input class="buttons" type="submit" name="attending_form_submit" value="Reserve Seats" onclick="submitMessage(event)">
             </div>
             <!-- show gift regardless of what they put maybe just change wording -->
             <!-- Would you like to send a digital gits? -->
              <div class="submission_message">
-                <p>Gracias for completar la applicaion.</p>
+                <p>Thank you for submitting the application.</p>
              </div>
 
         </div>

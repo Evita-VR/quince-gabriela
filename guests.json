@@ -1,0 +1,10 @@
+{
+    "guests": [
+        {
+            "family_name" : "Vasquez Reyes",
+            "num_members": 6,
+            "members" : ["Johana Reyes", "Eric Vasquez Reyes", "Evita Vasquez Reyes", "Gabriela Vasquez Reyes", "Steve Vasquez Reyes"],
+            "phone_num" : "(609) 356-2946"
+        }
+    ]
+}
